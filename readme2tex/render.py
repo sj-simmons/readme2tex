@@ -11,7 +11,7 @@ from xml.sax.saxutils import quoteattr
 import logging
 
 envelope = r'''%% processed with readme2tex
-\documentclass{article}
+\documentclass[leqno]{article}
 %s
 \usepackage{geometry}
 \pagestyle{empty}
