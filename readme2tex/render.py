@@ -11,7 +11,7 @@ from xml.sax.saxutils import quoteattr
 import logging
 
 envelope = r'''%% processed with readme2tex
-\documentclass[leqno]{article}
+\documentclass[leqno,fleqno]{article}
 %s
 \usepackage{amsmath}
 \usepackage{geometry}
