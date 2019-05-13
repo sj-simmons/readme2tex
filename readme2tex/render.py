@@ -13,6 +13,7 @@ import logging
 envelope = r'''%% processed with readme2tex
 \documentclass[leqno]{article}
 %s
+\usepackage{amsmath}
 \usepackage{geometry}
 \pagestyle{empty}
 \geometry{paperwidth=250mm, paperheight=16383pt, left=0pt, top=0pt, textwidth=426pt, marginparsep=20pt, marginparwidth=100pt, textheight=16263pt, footskip=40pt}
