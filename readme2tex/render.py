@@ -60,8 +60,8 @@ def extract_equations(content):
     lines = [line for line in content.splitlines()]
     while True:
         dollar, begin = next(cursor)
-        if dollar is -1: dollar = '-1'
-        if begin is -1: begin = '-1'
+        if dollar == -1: dollar = '-1'
+        if begin == -1: begin = '-1'
         if dollar == '-1' and begin == '-1': break
         if dollar != '-1' and (begin == '-1' or dollar < begin):
             # found a $, see if it's $$
@@ -107,7 +107,7 @@ def extract_equations(content):
                 continue
             end_marker = '\\end' + match.group()
             end = content.find(end_marker, begin)
-            if end is -1:
+            if end == -1:
                 cursor = begin + 6
                 continue
             cursor = end + len(end_marker)
