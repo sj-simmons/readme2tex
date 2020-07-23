@@ -177,10 +177,12 @@ def render(
 
         xml = (ET.fromstring(svg))
         attributes = xml.attrib
-        gfill = xml.find('{https://www.w3.org/2000/svg}g')
+        #gfill = xml.find('{https://www.w3.org/2000/svg}g')
+        gfill = xml.find('{http://www.w3.org/2000/svg}g')
         gfill.set('fill-opacity', '0.9')
         if not block:
-            uses = gfill.findall('{https://www.w3.org/2000/svg}use')
+            #uses = gfill.findall('{https://www.w3.org/2000/svg}use')
+            uses = gfill.findall('{http://www.w3.org/2000/svg}use')
             use = uses[0]
             # compute baseline off of this dummy element
             x = use.attrib['x']
